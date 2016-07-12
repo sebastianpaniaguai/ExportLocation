@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ExportLocation</string>
+    <string name="tname">Nombre</string>
+    <string name="tLat">Latitud</string>
+    <string name="tLong">Longitud</string>
+
+</resources>
