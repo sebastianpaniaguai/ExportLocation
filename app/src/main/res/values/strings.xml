@@ -1,7 +1,91 @@
 <resources>
     <string name="app_name">ExportLocation</string>
+    <string name="title">Registra aqui tus actividades</string>
     <string name="tname">Nombre</string>
+    <string name="ticket">Ticket</string>
+    <string name="BTSname">Nombre de BTS</string>
+    <string name="tipo">Tipo de actividad</string>
     <string name="tLat">Latitud</string>
     <string name="tLong">Longitud</string>
+    <string name="activity">Actividad</string>
+    <string name="date">Fecha</string>
+    <string name="observacion">Observación</string>
+    <string name="horasTrabajo">Horas de trabajo (entre 6AM y 8PM sin desplazamiento)</string>
+    <string name="horasDesplazamiento">Horas de desplazamiento (entre 6AM y 8PM)</string>
+    <string name="horasOvertime">Horas Overtime (entre 8PM y 6AM)</string>
+    <string name="send">Ingresar Actividad</string>
+    <string-array name="Actividades">
+        <item>Adecuación Civil</item>
+        <item>Adición de Banco de Baterías</item>
+        <item>Ampliacion</item>
+        <item>Atención de falla de energía</item>
+        <item>Atención de falla BSS</item>
+        <item>Atención de falla TX</item>
+        <item>Baja de configuración</item>
+        <item>Busqueda de Missing</item>
+        <item>Cambio de Baterias</item>
+        <item>Cambio de BBU</item>
+        <item>Cambio de Fibra</item>
+        <item>Cambio de frecuencias</item>
+        <item>Cambio de Jumper</item>
+        <item>Cambio de RRU</item>
+        <item>Cambio de WMPT</item>
+        <item>Capacitación</item>
+        <item>Cita medica empresarial</item>
+        <item>Conciliación de inventarios</item>
+        <item>Creación de Fault Reports</item>
+        <item>Creación/Cierre ATN/LAICON</item>
+        <item>Cruzadas BSC</item>
+        <item>Desmonde de equipos</item>
+        <item>Elaboración de informes</item>
+        <item>Elaboración de informe de mantenimiento</item>
+        <item>Elaboracipon de reporte desempeño</item>
+        <item>Entrega de Sitio</item>
+        <item>Entrega/Recepción elementos en bodega</item>
+        <item>Entregar/Recoger Llaves</item>
+        <item>Instalacion de sondas</item>
+        <item>Instalación sector nuevo</item>
+        <item>Inventario de sitio</item>
+        <item>Legalizaciones</item>
+        <item>Levantamiento de información</item>
+        <item>Log de fallas</item>
+        <item>Mantenimiento preventivo</item>
+        <item>Migración de enlaces</item>
+        <item>Preparación de tareas</item>
+        <item>Programación de sonda</item>
+        <item>Supervisión/acompañamiento</item>
+        <item>Transferencias LAICON</item>
+        <item>Verificacion Material/Equipos ATN</item>
+    </string-array>
 
+    <string-array name="horas">
+        <item>	0:30	</item>
+        <item>	1:00	</item>
+        <item>	1:30	</item>
+        <item>	2:00	</item>
+        <item>	2:30	</item>
+        <item>	3:00	</item>
+        <item>	3:30	</item>
+        <item>	4:00	</item>
+        <item>	4:30	</item>
+        <item>	5:00	</item>
+        <item>	5:30	</item>
+        <item>	6:00	</item>
+        <item>	6:30	</item>
+        <item>	7:00	</item>
+        <item>	7:30	</item>
+        <item>	8:00	</item>
+        <item>	8:30	</item>
+        <item>	9:00	</item>
+        <item>	9:30	</item>
+        <item>	10:00	</item>
+        <item>	10:30	</item>
+        <item>	11:00	</item>
+        <item>	11:30	</item>
+        <item>	12:00	</item>
+        <item>	12:30	</item>
+        <item>	13:00	</item>
+        <item>	13:30	</item>
+        <item>	14:00	</item>
+    </string-array>
 </resources>

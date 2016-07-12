@@ -1,6 +1,7 @@
 package com.example.sebastian.exportlocation;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
 import android.location.Criteria;
@@ -14,7 +15,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -41,9 +45,35 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
                 .addApi(LocationServices.API)
                 .build();
         final Button send = (Button) findViewById(R.id.button);
-        final TextView tname = (TextView) findViewById(R.id.tname);
+        final Button upload = (Button) findViewById(R.id.upload);
+
+        final EditText Ticket = (EditText) findViewById(R.id.ticket);
+        final EditText BTSname = (EditText) findViewById(R.id.BTSname);
+
+        final Spinner actividad = (Spinner) findViewById(R.id.actividad);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Actividades,R.layout.support_simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        actividad.setAdapter(adapter);
+
+        final Spinner horasTrabajo = (Spinner) findViewById(R.id.horasTrabajo);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.horas,R.layout.support_simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        horasTrabajo.setAdapter(adapter2);
+
+        final Spinner horasDesplazamiento = (Spinner) findViewById(R.id.horasDesplazamiento);
+        adapter2 = ArrayAdapter.createFromResource(this, R.array.horas,R.layout.support_simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        horasDesplazamiento.setAdapter(adapter2);
+
+        final Spinner horasOvertime = (Spinner) findViewById(R.id.horasOvertime);
+        adapter2 = ArrayAdapter.createFromResource(this, R.array.horas,R.layout.support_simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        horasOvertime.setAdapter(adapter2);
+
         final TextView tLong = (TextView) findViewById(R.id.tLong);
         final TextView tLat = (TextView) findViewById(R.id.tLat);
+
+
         mLocationRequest = LocationRequest.create()
                 .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
                 .setInterval(10 * 1000)        // 10 seconds, in milliseconds
@@ -62,11 +92,21 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
                 else{
                     handleNewLocation(location);
                 }
-                tname.setText("Tony Stark");
-                tLat.setText(Double.toString(location.getLatitude()));
-                tLong.setText(Double.toString(location.getLatitude()));
+                //tname.setText("Tony Stark");
+                tLat.setText(String.format("%.4f",location.getLatitude()));
+                tLong.setText(String.format("%.4f",location.getLongitude()));
+                send.setText("✓");
     }
-});
+              });
+        upload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MostrarActivity.class);
+                intent.putExtra("Ticket", Ticket.getText().toString());
+                intent.putExtra("Estacion", BTSname.getText().toString());
+                startActivity(intent);
+            }
+        });
 
     }
 

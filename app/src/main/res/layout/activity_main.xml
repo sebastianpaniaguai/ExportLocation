@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,40 +9,210 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     tools:context="com.example.sebastian.exportlocation.MainActivity">
-
-    <Button
-        android:layout_width="200sp"
-        android:layout_height="50sp"
-        android:layout_gravity="center"
-        android:id="@+id/button"
-        android:gravity="center_vertical"/>
-    <TextView
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/tname"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:id="@+id/tname"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.sebastian.exportlocation.MainActivity">
         <TextView
-            android:layout_width="0sp"
-            android:layout_weight="5"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/tLat"
+            android:hint="@string/title"
             android:textAlignment="center"
-            android:textSize="20sp"
-            android:id="@+id/tLat"/>
-        <TextView
-            android:layout_width="0sp"
-            android:layout_weight="5"
+            android:textColor="#F00100"
+            android:textSize="40sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
             android:layout_height="wrap_content"
-            android:hint="@string/tLong"
-            android:textAlignment="center"
+            android:layout_marginBottom="5sp">
+            <TextView
+                android:layout_width="0sp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:hint="@string/ticket"
+                android:textAlignment="textStart"
+                android:textSize="20sp" />
+            <EditText
+                android:layout_width="0sp"
+                android:layout_weight="10"
+                android:layout_height="wrap_content"
+                android:hint="@string/ticket"
+                android:textAlignment="center"
+                android:inputType="number"
+                android:id="@+id/ticket"
+                android:textSize="20sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp">
+            <TextView
+                android:layout_width="0sp"
+                android:layout_weight="10"
+                android:layout_height="wrap_content"
+                android:hint="@string/BTSname"
+                android:textAlignment="textStart"
+                android:textSize="20sp" />
+            <EditText
+                android:layout_width="0sp"
+                android:layout_weight="10"
+                android:layout_height="wrap_content"
+                android:hint="@string/BTSname"
+                android:textAlignment="center"
+                android:inputType="textCapCharacters"
+                android:id="@+id/BTSname"
+                android:textSize="20sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp">
+            <TextView
+                android:layout_width="0sp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:hint="@string/activity"
+                android:textAlignment="textStart"
+                android:textSize="20sp" />
+            <Spinner
+                android:layout_width="0sp"
+                android:layout_weight="10"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:id="@+id/actividad"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:hint="@string/date"
+                android:textAlignment="textStart"
+                android:layout_gravity="center_vertical"
+                android:textSize="20sp" />
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_weight="10"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:id="@+id/date"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp">
+            <TextView
+                android:layout_width="0sp"
+                android:layout_weight="10"
+                android:layout_height="wrap_content"
+                android:hint="@string/horasTrabajo"
+                android:textAlignment="textStart"
+                android:textSize="15sp" />
+            <Spinner
+                android:layout_width="0sp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:id="@+id/horasTrabajo"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp">
+            <TextView
+                android:layout_width="0sp"
+                android:layout_weight="10"
+                android:layout_height="wrap_content"
+                android:hint="@string/horasDesplazamiento"
+                android:textAlignment="textStart"
+                android:textSize="15sp" />
+            <Spinner
+                android:layout_width="0sp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:id="@+id/horasDesplazamiento"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp">
+            <TextView
+                android:layout_width="0sp"
+                android:layout_weight="10"
+                android:layout_height="wrap_content"
+                android:hint="@string/horasOvertime"
+                android:textAlignment="textStart"
+                android:textSize="15sp" />
+            <Spinner
+                android:layout_width="0sp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:id="@+id/horasOvertime"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp">
+            <TextView
+                android:layout_width="0sp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:hint="@string/tLat"
+                android:textAlignment="center"
+                android:layout_gravity="center_vertical"
+                android:textSize="20sp"
+                android:id="@+id/tLat"/>
+            <TextView
+                android:layout_width="0sp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:hint="@string/tLong"
+                android:textAlignment="center"
+                android:layout_gravity="center_vertical"
+                android:textSize="20sp"
+                android:id="@+id/tLong"/>
+            <Button
+                android:layout_width="0sp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="¿?"
+                android:layout_gravity="center"
+                android:id="@+id/button"
+                android:background="@color/lightblue"
+                android:textAlignment="center"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences|textMultiLine"
+            android:hint="@string/observacion"
+            android:gravity="top|left"
+            android:scrollbars="vertical"
+            android:lines="4"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lightgreen"
             android:textSize="20sp"
-            android:id="@+id/tLong"/>
+            android:text="@string/send"
+            android:id="@+id/upload"
+            android:onClick="sendData"
+            />
     </LinearLayout>
-
-</LinearLayout>
+</ScrollView>
